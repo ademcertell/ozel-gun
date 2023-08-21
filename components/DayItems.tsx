@@ -57,18 +57,18 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
       className={`text-lg md:text-xl p-3 mb-2 border rounded-2xl ${
         day.date === new Date().toISOString().substr(0, 10)
           ? "border-blue-500"
-          : "border-gray-100 border-opacity-10"
+          : "border-gray-100 border-opacity-5"
       }`}
       onClick={handleClick}
     >
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
         <div className="mb-2 md:mb-0 md:mr-4">
-          <span className="">{day.emoji}</span>
+          <span>{day.emoji}</span>
         </div>
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full">
           <div>
-            <span className="text-xl text-white font-semibold">{day.name}</span>
-            <span className="text-sm text-gray-300 md:text-base opacity-50 ml-2">
+            <span className="text-xl dark:text-white text-black font-semibold">{day.name}</span>
+            <span className="text-sm dark:text-gray-300 md:text-base opacity-50 ml-2">
               {formatDate(day.date)}
             </span>
           </div>

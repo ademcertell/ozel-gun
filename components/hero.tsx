@@ -70,10 +70,10 @@ const Hero: React.FC = () => {
     <div className="px-4 py-8 mx-auto max-w-screen-md">
       <NotificationSound />
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl dark:text-white font-bold">Özel Gün Takip</h1>
-        <TodayDate className="text-sm text-gray-600" />
+        <h1 className="text-3xl dark:text-white text-black font-bold">Özel Gün Takip</h1>
+        <TodayDate/>
       </div>
-      <hr className="border-gray-300 border-1 mb-6" />
+      <hr className="border-gray-300 border-1 mb-6 dark:opacity-10 opacity-40" />
       <div>
         <ul>
           {specialDays.map((day, index) => (
