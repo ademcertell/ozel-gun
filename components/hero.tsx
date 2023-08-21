@@ -29,7 +29,6 @@ const Hero: React.FC = () => {
   };
 
   useEffect(() => {
-    // Tarayıcı bildirim izni verilmiş mi kontrol ediyoruz
     if ("Notification" in window && Notification.permission !== "granted") {
       Notification.requestPermission();
     }
@@ -71,7 +70,7 @@ const Hero: React.FC = () => {
     <div className="px-4 py-8 mx-auto max-w-screen-md">
       <NotificationSound />
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Özel Gün Takip</h1>
+        <h1 className="text-3xl dark:text-white font-bold">Özel Gün Takip</h1>
         <TodayDate className="text-sm text-gray-600" />
       </div>
       <hr className="border-gray-300 border-1 mb-6" />
