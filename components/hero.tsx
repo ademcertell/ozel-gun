@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+
 import NotificationItem from "./DayItems";
 import TodayDate from "./TodayDate";
 import NotificationSound from "./NotificationSound";
@@ -14,7 +15,7 @@ interface SpecialDay {
 const Hero: React.FC = () => {
   const specialDays: SpecialDay[] = [
     { emoji: "🎄", name: "Yılbaşı", date: "2023-08-21" },
-    { emoji: "❣️", name: "Sevgililer Günü", date: "2024-08-22" },
+    { emoji: "❣️", name: "Sevgililer Günü", date: "2023-08-22" },
     { emoji: "🤱", name: "Anneler Günü", date: "2024-05-14" },
   ];
 
