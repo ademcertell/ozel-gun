@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Özel Gün Takip",
   description: "Özel günleri takip edin.",
+  icons: {
+    icon: "/avatar.png",
+    apple: "/avatar.png",
+  },
 };
 
 export default function RootLayout({
