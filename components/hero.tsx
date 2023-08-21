@@ -29,6 +29,13 @@ const Hero: React.FC = () => {
   };
 
   useEffect(() => {
+    // Tarayıcı bildirim izni verilmiş mi kontrol ediyoruz
+    if ("Notification" in window && Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+  }, []);
+
+  useEffect(() => {
     checkSpecialDays();
     setInterval(checkSpecialDays, 1000 * 60 * 60 * 24);
   });
