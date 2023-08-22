@@ -64,7 +64,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
           : isPastDay
           ? "bg-gray-300 bg-opacity-40 dark:bg-opacity-10 text-gray-600"
           : isFutureDay
-          ? "bg-yellow-200 bg-opacity-40 text-gray-700"
+          ? "bg-green-200 bg-opacity-40 text-gray-700"
           : "border-gray-100 border-opacity-5"
       }`}
       onClick={handleClick}
@@ -78,7 +78,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
             <span className="text-xl dark:text-white text-black font-semibold">
               {day.name}
             </span>
-            <span className="text-sm dark:text-gray-300 text-gray-500 md:text-base opacity-50 ml-2">
+            <span className="text-sm dark:text-gray-100 text-gray-500 md:text-base opacity-50 ml-2">
               {formatDate(day.date)}
             </span>
           </div>
