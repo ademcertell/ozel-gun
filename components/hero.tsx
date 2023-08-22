@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 
-import NotificationItem from "./DayItems";
+import NotificationItem from "./NotificationItem";
 import TodayDate from "./TodayDate";
 import NotificationSound from "./NotificationSound";
+import Link from "next/link";
 
 interface SpecialDay {
   emoji: string;
@@ -16,6 +17,7 @@ const Hero: React.FC = () => {
   const specialDays: SpecialDay[] = [
     { emoji: "🎄", name: "Yılbaşı", date: "2023-08-21" },
     { emoji: "❣️", name: "Sevgililer Günü", date: "2023-08-22" },
+    { emoji: "✨", name: "Test", date: "2023-08-23" },
     { emoji: "🤱", name: "Anneler Günü", date: "2024-05-14" },
   ];
 
@@ -24,7 +26,7 @@ const Hero: React.FC = () => {
   const openModal = () => {
     setIsModalOpen(true);
   };
-  
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -50,7 +52,6 @@ const Hero: React.FC = () => {
     });
   };
 
-
   const sendNotification = (day: SpecialDay) => {
     if (
       typeof Notification !== "undefined" &&
@@ -71,8 +72,16 @@ const Hero: React.FC = () => {
     <div className="px-4 py-8 mx-auto max-w-screen-md">
       <NotificationSound />
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl dark:text-white text-black font-bold">Özel Gün Takip</h1>
-        <TodayDate/>
+        <Link
+          href="https://github.com/sponsors/ademcertell"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Bana destek ol :)"
+          className="text-2xl dark:text-white text-black font-bold"
+        >
+          Özel Gün Takip
+        </Link>
+        <TodayDate />
       </div>
       <hr className="border-gray-300 border-1 mb-6 dark:opacity-10 opacity-40" />
       <div>

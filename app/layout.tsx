@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: "Özel Gün Takip",
   description: "Özel günleri takip edin.",
   icons: {
-    icon: "/avatar.png",
-    apple: "/avatar.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
