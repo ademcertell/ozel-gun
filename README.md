@@ -1,4 +1,4 @@
-# ozel-tarih
+# Özel Gün Takip
 A simple tool to keep track of special occasions and receive reminder notifications.
 
 ## Installation
