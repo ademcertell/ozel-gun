@@ -1,7 +1,10 @@
 {
-  "name": "ozel-tarih",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ozel-gun",
+  "version": "2.0.0",
+  "description": "Özel günleri takip etmek ve hatirlatici bildirimler almak için basit bir araç - Next.js + Tailwind CSS + Framer Motion + TypeScript",
+  "author": "Adem Can Certel",
+  "license": "Apache-2.0",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
