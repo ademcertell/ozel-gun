@@ -13,5 +13,6 @@ yarn dev
 
 ## Features
 
-- [x] Follow special occasions
-- [x] Receive reminder notifications
+- [x] Follow special occasions.
+- [x] Receive reminder notifications.
+- [x] Get gift ideas when the special day arrives.
