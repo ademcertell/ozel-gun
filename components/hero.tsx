@@ -1,24 +1,76 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import NotificationItem from "./NotificationItem";
 import TodayDate from "./TodayDate";
 import NotificationSound from "./NotificationSound";
-import Link from "next/link";
 
 interface SpecialDay {
-  emoji: string;
+  emoji: string | React.ReactNode;
   name: string;
   date: string;
 }
 
 const Hero: React.FC = () => {
   const specialDays: SpecialDay[] = [
-    { emoji: "🎄", name: "Yılbaşı", date: "2023-08-21" },
-    { emoji: "❣️", name: "Sevgililer Günü", date: "2023-08-22" },
-    { emoji: "✨", name: "Test", date: "2023-08-23" },
-    { emoji: "🤱", name: "Anneler Günü", date: "2024-05-14" },
+    {
+      emoji: "🎄",
+      name: "Yılbaşı",
+      date: "2024-01-01",
+    },
+    {
+      emoji: "❣️",
+      name: "Sevgililer Günü",
+      date: "2024-02-14",
+    },
+    {
+      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      name: "İstiklâl Marşı'nın Kabulü",
+      date: "2024-03-12",
+    },
+    {
+      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      name: "Çanakkale Zaferi ve Şehitleri Anma Günü",
+      date: "2024-03-18",
+    },
+    {
+      emoji: "🧒🏻",
+      name: "23 Nisan Ulusal Egemenlik ve Çoçuk Bayramı",
+      date: "2024-04-23",
+    },
+    {
+      emoji: "✊🏻",
+      name: "Emek ve dayanışma Günü",
+      date: "2024-05-1",
+    },
+    {
+      emoji: "👩🏻‍🍼",
+      name: "Anneler günü",
+      date: "2024-05-12",
+    },
+    {
+      emoji: <Image src="/ataturk-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      name: "Atatürk'ü Anma ve Gençlik ve Spor Bayram",
+      date: "2024-05-19",
+    },
+    {
+      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      name: "29 Ekim Cumhuriyet Bayramı",
+      date: "2024-10-29",
+    },
+    {
+      emoji: <Image src="/ataturk-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      name: "Atatürk'ü anma günü ve Atatürk haftası",
+      date: "2024-11-10",
+    },
+    {
+      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      name: "30 Ağustos Zafer Bayramı",
+      date: "2024-08-30",
+    },
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);

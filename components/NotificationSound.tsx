@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const NotificationSound = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -12,9 +12,7 @@ const NotificationSound = () => {
     }
   }, []);
 
-  return (
-    <audio ref={audioRef} src="notification.mp3" preload="auto" />
-  );
+  return <audio ref={audioRef} src="notification.mp3" preload="auto" />;
 };
 
 export default NotificationSound;

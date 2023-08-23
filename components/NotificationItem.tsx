@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 interface SpecialDay {
-  emoji: string;
+  emoji: string | React.ReactNode;
   name: string;
   date: string;
 }
