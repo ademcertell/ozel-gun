@@ -1,13 +1,17 @@
 # Özel Gün Takip
+
 A simple tool to keep track of special occasions and receive reminder notifications.
 
 ## Installation
+
 ```
 git clone
-cd ozel-tarih
-pip install -r requirements.txt
+cd ozel-gun
+yarn
+yarn dev
 ```
 
 ## Features
+
 - [x] Follow special occasions
 - [x] Receive reminder notifications
