@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
     {
       emoji: "🎄",
       name: "Yılbaşı",
-      date: "2023-08-24",
+      date: "2024-01-01",
       giftIdeas: [
         "Şık bir kolye veya bilezik",
         "Kablosuz kulaklık veya akıllı saati",
@@ -191,16 +191,6 @@ const Hero: React.FC = () => {
     "Atatürk'ü anma günü ve Atatürk haftası",
     "30 Ağustos Zafer Bayramı",
   ];
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   useEffect(() => {
     if ("Notification" in window && Notification.permission !== "granted") {
