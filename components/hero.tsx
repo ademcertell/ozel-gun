@@ -7,11 +7,13 @@ import Image from "next/image";
 import NotificationItem from "./NotificationItem";
 import TodayDate from "./TodayDate";
 import NotificationSound from "./NotificationSound";
+import GiftIdeasMenu from "./GiftIdeasMenu";
 
 interface SpecialDay {
   emoji: string | React.ReactNode;
   name: string;
   date: string;
+  giftIdeas: string[];
 }
 
 const Hero: React.FC = () => {
@@ -19,58 +21,175 @@ const Hero: React.FC = () => {
     {
       emoji: "🎄",
       name: "Yılbaşı",
-      date: "2024-01-01",
+      date: "2023-08-24",
+      giftIdeas: [
+        "Şık bir kolye veya bilezik",
+        "Kablosuz kulaklık veya akıllı saati",
+        "Tarzına uygun bir atkı veya ceket",
+        "Oyun gece seti veya sıcak içecekler",
+        "Özel bir parfüm veya kokulu mumlar",
+      ],
     },
     {
       emoji: "❣️",
       name: "Sevgililer Günü",
       date: "2024-02-14",
+      giftIdeas: ["Hediye fikri 1", "Hediye fikri 2"],
     },
     {
-      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
-      name: "İstiklâl Marşı'nın Kabulü",
-      date: "2024-03-12",
-    },
-    {
-      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      emoji: (
+        <Image
+          src="/tr-emoji.png"
+          alt="İstiklâl Marşı"
+          width={30}
+          height={30}
+        />
+      ),
       name: "Çanakkale Zaferi ve Şehitleri Anma Günü",
       date: "2024-03-18",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🕌",
+      name: "Arefe",
+      date: "2024-04-09",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🕌",
+      name: "Ramazan Bayramı 1. Gün",
+      date: "2024-04-10",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🕌",
+      name: "Ramazan Bayramı 2. Gün",
+      date: "2024-04-11",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🕌",
+      name: "Ramazan Bayramı 3. Gün",
+      date: "2024-04-12",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🕌",
+      name: "Arefe",
+      date: "2024-04-09",
+      giftIdeas: [],
     },
     {
       emoji: "🧒🏻",
       name: "23 Nisan Ulusal Egemenlik ve Çoçuk Bayramı",
       date: "2024-04-23",
+      giftIdeas: [],
     },
     {
       emoji: "✊🏻",
       name: "Emek ve dayanışma Günü",
       date: "2024-05-1",
+      giftIdeas: [],
+    },
+    {
+      emoji: (
+        <Image
+          src="/ataturk-emoji.png"
+          alt="İstiklâl Marşı"
+          width={30}
+          height={30}
+        />
+      ),
+      name: "Atatürk'ü Anma ve Gençlik ve Spor Bayram",
+      date: "2024-05-19",
+      giftIdeas: [],
     },
     {
       emoji: "👩🏻‍🍼",
       name: "Anneler günü",
       date: "2024-05-12",
+      giftIdeas: ["Hediye fikri 1", "Hediye fikri 2"],
     },
     {
-      emoji: <Image src="/ataturk-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
-      name: "Atatürk'ü Anma ve Gençlik ve Spor Bayram",
-      date: "2024-05-19",
+      emoji: "🕌",
+      name: "Arefe",
+      date: "2024-06-15",
+      giftIdeas: [],
     },
     {
-      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
-      name: "29 Ekim Cumhuriyet Bayramı",
-      date: "2024-10-29",
+      emoji: "🕌",
+      name: "Kurban Bayramı 1. Gün",
+      date: "2024-06-16",
+      giftIdeas: [],
     },
     {
-      emoji: <Image src="/ataturk-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
-      name: "Atatürk'ü anma günü ve Atatürk haftası",
-      date: "2024-11-10",
+      emoji: "🕌",
+      name: "Kurban Bayramı 2. Gün",
+      date: "2024-06-17",
+      giftIdeas: [],
     },
     {
-      emoji: <Image src="/tr-emoji.png" alt="İstiklâl Marşı" width={30} height={30} />,
+      emoji: "🕌",
+      name: "Kurban Bayramı 3. Gün",
+      date: "2024-06-18",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🕌",
+      name: "Kurban Bayramı 4. Gün",
+      date: "2024-06-19",
+      giftIdeas: [],
+    },
+    {
+      emoji: (
+        <Image
+          src="/tr-emoji.png"
+          alt="İstiklâl Marşı"
+          width={30}
+          height={30}
+        />
+      ),
       name: "30 Ağustos Zafer Bayramı",
       date: "2024-08-30",
+      giftIdeas: ["Hediye fikri 1", "Hediye fikri 2"],
     },
+    {
+      emoji: (
+        <Image
+          src="/tr-emoji.png"
+          alt="İstiklâl Marşı"
+          width={30}
+          height={30}
+        />
+      ),
+      name: "29 Ekim Cumhuriyet Bayramı",
+      date: "2024-10-29",
+      giftIdeas: [],
+    },
+    {
+      emoji: (
+        <Image
+          src="/ataturk-emoji.png"
+          alt="İstiklâl Marşı"
+          width={30}
+          height={30}
+        />
+      ),
+      name: "Atatürk'ü anma günü ve Atatürk haftası",
+      date: "2024-11-10",
+      giftIdeas: [],
+    },
+  ];
+
+  const excludedGiftDays = [
+    "İstiklâl Marşı'nın Kabulü",
+    "Çanakkale Zaferi ve Şehitleri Anma Günü",
+    "23 Nisan Ulusal Egemenlik ve Çoçuk Bayramı",
+    "Emek ve dayanışma Günü",
+    "Atatürk'ü Anma ve Gençlik ve Spor Bayram",
+    "29 Ekim Cumhuriyet Bayramı",
+    "Atatürk'ü anma günü ve Atatürk haftası",
+    "30 Ağustos Zafer Bayramı",
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -139,7 +258,11 @@ const Hero: React.FC = () => {
       <div>
         <ul>
           {specialDays.map((day, index) => (
-            <NotificationItem key={index} day={day} />
+            <NotificationItem
+              key={index}
+              day={day}
+              showGiftButton={!excludedGiftDays.includes(day.name)}
+            />
           ))}
         </ul>
       </div>

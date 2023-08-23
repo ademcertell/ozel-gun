@@ -1,14 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import GiftIdeasMenu from "./GiftIdeasMenu";
 
 interface SpecialDay {
   emoji: string | React.ReactNode;
   name: string;
   date: string;
+  giftIdeas: string[];
 }
 
 interface NotificationItemProps {
   day: SpecialDay;
+  showGiftButton: boolean;
 }
 
 const months = [
@@ -26,7 +29,7 @@ const months = [
   "Aralık",
 ];
 
-const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
+const NotificationItem: React.FC<NotificationItemProps> = ({ day, showGiftButton  }) => {
   const formatDate = (date: string) => {
     const dateObj = new Date(date);
     const dayOfMonth = String(dateObj.getDate()).padStart(2, "0");
@@ -34,6 +37,12 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
     const year = dateObj.getFullYear();
 
     return `${dayOfMonth} ${months[monthIndex]} ${year}`;
+  };
+
+  const [isGiftIdeasOpen, setIsGiftIdeasOpen] = useState(false);
+
+  const toggleGiftIdeas = () => {
+    setIsGiftIdeasOpen(!isGiftIdeasOpen);
   };
 
   const handleClick = () => {
@@ -50,6 +59,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
   };
 
   const today = new Date().toISOString().substr(0, 10);
+  const isSpecialDay = day.date === today;
   const isPastDay = day.date < today;
   const isFutureDay = day.date > today;
 
@@ -81,14 +91,24 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
             <span className="text-sm dark:text-gray-100 text-gray-500 md:text-base opacity-50 ml-2">
               {formatDate(day.date)}
             </span>
+            <div>
+              {isSpecialDay && showGiftButton && (
+                <button
+                  className="mt-2 md:mt-0 text-xs dark:text-blue-300 text-blue-500 cursor-pointer"
+                  onClick={toggleGiftIdeas}
+                >
+                  Hediye Fikirleri
+                </button>
+              )}
+            </div>
           </div>
           {isPastDay && (
-            <span className="text-sm dark:text-gray-300 text-gray-500">
+            <span className="mt-2 md:mt-0 text-sm dark:text-gray-300 text-gray-500">
               Geçti
             </span>
           )}
           {isFutureDay && (
-            <span className="text-sm dark:text-gray-200 text-gray-400">
+            <span className="mt-2 md:mt-0 text-sm dark:text-gray-200 text-gray-400">
               Yakında
             </span>
           )}
@@ -102,6 +122,9 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ day }) => {
           )}
         </div>
       </div>
+      {isGiftIdeasOpen && showGiftButton && (
+        <GiftIdeasMenu isOpen={isGiftIdeasOpen} giftIdeas={day.giftIdeas} />
+      )}
     </motion.li>
   );
 };
