@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       emoji: "❣️",
       name: "Sevgililer Günü",
       date: "2024-02-14",
-      giftIdeas: ["Hediye fikri 1", "Hediye fikri 2"],
+      giftIdeas: ["", "", "", "", ""],
     },
     {
       emoji: (
@@ -190,6 +190,14 @@ const Hero: React.FC = () => {
     "29 Ekim Cumhuriyet Bayramı",
     "Atatürk'ü anma günü ve Atatürk haftası",
     "30 Ağustos Zafer Bayramı",
+    "Arefe",
+    "Ramazan Bayramı 1. Gün",
+    "Ramazan Bayramı 2. Gün",
+    "Ramazan Bayramı 3. Gün",
+    "Kurban Bayramı 1. Gün",
+    "Kurban Bayramı 2. Gün",
+    "Kurban Bayramı 3. Gün",
+    "Kurban Bayramı 4. Gün",
   ];
 
   useEffect(() => {
