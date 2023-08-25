@@ -1,2 +1,0 @@
-Sadece özel günlerde paylaş butonu olucak eğer özel gün değilse paylaş butonu false olucak. YAPILDI.
-Özel gün olduğunda üstüne basıldığında veya mouse ile geldiğinde animasyon patlayacak Anneler günü ise kalp Yılbaşı ise 🎉
