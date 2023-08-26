@@ -151,7 +151,20 @@ const Hero: React.FC = () => {
       ),
       name: "30 Ağustos Zafer Bayramı",
       date: "2024-08-30",
-      giftIdeas: ["Hediye fikri 1", "Hediye fikri 2"],
+      giftIdeas: [],
+    },
+        {
+      emoji: (
+        <Image
+          src="/tr-emoji.png"
+          alt="İstiklâl Marşı"
+          width={30}
+          height={30}
+        />
+      ),
+      name: "30 Ağustos Zafer Bayramı",
+      date: "2023-08-30",
+      giftIdeas: [],
     },
     {
       emoji: (
