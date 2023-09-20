@@ -29,7 +29,10 @@ const months = [
   "Aralık",
 ];
 
-const NotificationItem: React.FC<NotificationItemProps> = ({ day, showGiftButton  }) => {
+const NotificationItem: React.FC<NotificationItemProps> = ({
+  day,
+  showGiftButton,
+}) => {
   const formatDate = (date: string) => {
     const dateObj = new Date(date);
     const dayOfMonth = String(dateObj.getDate()).padStart(2, "0");

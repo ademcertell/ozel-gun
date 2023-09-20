@@ -7,7 +7,7 @@ import Image from "next/image";
 import NotificationItem from "./NotificationItem";
 import TodayDate from "./TodayDate";
 import NotificationSound from "./NotificationSound";
-import GiftIdeasMenu from "./GiftIdeasMenu";
+import InstallBanner from "./InstallBanner";
 
 interface SpecialDay {
   emoji: string | React.ReactNode;
@@ -277,6 +277,7 @@ const Hero: React.FC = () => {
           ))}
         </ul>
       </div>
+      <InstallBanner />
     </div>
   );
 };
