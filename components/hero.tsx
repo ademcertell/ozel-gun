@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
     },
     {
       emoji: "👩🏻‍🍼",
-      name: "Anneler günü",
+      name: "Anneler Günü",
       date: "2024-05-12",
       giftIdeas: ["Hediye fikri 1", "Hediye fikri 2"],
     },
