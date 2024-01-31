@@ -20,3 +20,4 @@ yarn dev
 # Todo List
  - [x] Prompt Uyarısı eklenecek. (https://ozel-gun.vercel.app/)
  - [ ] Özel günün hangi tarihler arasında gerçekleştiğine dair işlevsellik eklenecek.
+ - [ ] Profil oluşturma işlevselliği eklenecektir.

@@ -61,15 +61,6 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
     window.open(shareUrl, "_blank");
   };
 
-  const handleInstagramStoryShare = () => {
-    const shareText = `Bugün ${day.name}!`;
-    const shareUrl = `https://www.instagram.com/addToStory/?url=${encodeURIComponent(
-      window.location.href
-    )}`;
-
-    window.open(shareUrl, "_blank");
-  };
-
   const today = new Date().toISOString().substr(0, 10);
   const isSpecialDay = day.date === today;
   const isPastDay = day.date < today;
@@ -130,14 +121,6 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
               onClick={handleShareClick}
             >
               Paylaş
-            </button>
-          )}
-          {day.date === today && (
-            <button
-              className="mt-2 md:mt-0 text-sm dark:text-blue-300 text-blue-500 cursor-pointer"
-              onClick={handleInstagramStoryShare}
-            >
-              Test Instagram
             </button>
           )}
         </div>
