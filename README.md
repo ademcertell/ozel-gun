@@ -1,8 +1,8 @@
 # Özel Gün Takip
 
-A simple tool to keep track of special occasions and receive reminder notifications.
+Özel günleri takip etmek ve hatırlatma bildirimleri almak için basit bir araç.
 
-## Installation
+## Kurulum
 
 ```
 git clone
@@ -11,12 +11,12 @@ yarn
 yarn dev
 ```
 
-## Features
+## Özellikler
 
-- [x] Follow special occasions.
-- [x] Receive reminder notifications.
-- [x] Get gift ideas when the special day arrives.
+- [x] Özel günlerin takibi.
+- [x] Hatırlatma bildirimleri alma.
+- [x] Özel günler için hediye fikirleri.
 
 # Todo List
- - [x] Download app notification will be added. (https://ozel-gun.vercel.app/)
- - [ ] Functionality will be added between which dates the special day takes place.
+ - [x] Prompt Uyarısı eklenecek. (https://ozel-gun.vercel.app/)
+ - [ ] Özel günün hangi tarihler arasında gerçekleştiğine dair işlevsellik eklenecek.
