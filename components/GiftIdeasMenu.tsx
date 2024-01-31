@@ -17,7 +17,7 @@ const GiftIdeasMenu: React.FC<GiftIdeasMenuProps> = ({ isOpen, giftIdeas }) => {
       <ul>
         {giftIdeas.map((idea, index) => (
           <li
-            className="px-12 text-sm text-gray-500 dark:text-gray-100/50"
+            className="px-12 text-base text-black dark:text-white opacity-60"
             key={index}
           >
             {idea}

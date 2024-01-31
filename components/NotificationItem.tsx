@@ -91,13 +91,13 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
             <span className="text-xl dark:text-white text-black font-semibold">
               {day.name}
             </span>
-            <span className="text-sm dark:text-gray-100 text-gray-500 md:text-base opacity-50 ml-2">
+            <span className="text-sm dark:text-white text-black opacity-70 ml-2">
               {formatDate(day.date)}
             </span>
             <div>
               {isSpecialDay && showGiftButton && (
                 <button
-                  className="mt-2 md:mt-0 text-xs dark:text-blue-300 text-blue-500 cursor-pointer"
+                  className="mt-2 md:mt-0 text-sm dark:text-blue-300 text-blue-500 cursor-pointer"
                   onClick={toggleGiftIdeas}
                 >
                   Hediye Fikirleri
@@ -117,7 +117,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
           )}
           {day.date === today && (
             <button
-              className="mt-2 md:mt-0 text-xs dark:text-blue-300 text-blue-500 cursor-pointer"
+              className="mt-2 md:mt-0 text-sm dark:text-blue-300 text-blue-500 cursor-pointer"
               onClick={handleShareClick}
             >
               Paylaş
