@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import NotificationItem from "./NotificationItem";
 import TodayDate from "./Date";
@@ -16,35 +15,29 @@ interface SpecialDay {
   giftIdeas: string[];
 }
 
+interface RegionalHolidayListProps {
+  region: string;
+}
+
 const Hero: React.FC = () => {
   const specialDays: SpecialDay[] = [
     {
-      emoji: "⚡",
-      name: "Testing Day",
-      date: "2024-01-31",
+      emoji: "💖",
+      name: "Sevgililer Günü",
+      date: "2024-02-14",
       giftIdeas: [
-        "Computer Parts (CPU, GPU, RAM, etc.)",
+        "Çiçek",
+        "Saat",
+        "Kolye",
+        "Yüzük",
+        "Parfüm",
+        "Pırlanta"
       ],
     },
   ];
 
-  const excludedGiftDays = [
-    "İstiklâl Marşı'nın Kabulü",
-    "Çanakkale Zaferi ve Şehitleri Anma Günü",
-    "23 Nisan Ulusal Egemenlik ve Çoçuk Bayramı",
-    "Emek ve dayanışma Günü",
-    "Atatürk'ü Anma ve Gençlik ve Spor Bayram",
-    "29 Ekim Cumhuriyet Bayramı",
-    "Atatürk'ü anma günü ve Atatürk haftası",
-    "30 Ağustos Zafer Bayramı",
-    "Arefe",
-    "Ramazan Bayramı 1. Gün",
-    "Ramazan Bayramı 2. Gün",
-    "Ramazan Bayramı 3. Gün",
-    "Kurban Bayramı 1. Gün",
-    "Kurban Bayramı 2. Gün",
-    "Kurban Bayramı 3. Gün",
-    "Kurban Bayramı 4. Gün",
+    const excludedGiftDays = [
+    "",
   ];
 
   useEffect(() => {
@@ -57,6 +50,15 @@ const Hero: React.FC = () => {
     checkSpecialDays();
     setInterval(checkSpecialDays, 1000 * 60 * 60 * 24);
   });
+
+  useEffect(() => {
+    const userLanguage = navigator.language;
+
+    // Tarayıcı dilini kontrol et ve dil Türkçe değilse, sayfa içeriğini İngilizce olarak belirle
+    if (!userLanguage.startsWith('tr')) {
+      document.documentElement.lang = 'en'; // HTML etiketinin lang özelliğini ayarla
+    }
+  }, []);
 
   const checkSpecialDays = () => {
     const today = new Date().toISOString().substr(0, 10);
