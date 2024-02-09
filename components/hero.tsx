@@ -54,9 +54,8 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const userLanguage = navigator.language;
 
-    // Tarayıcı dilini kontrol et ve dil Türkçe değilse, sayfa içeriğini İngilizce olarak belirle
     if (!userLanguage.startsWith('tr')) {
-      document.documentElement.lang = 'en'; // HTML etiketinin lang özelliğini ayarla
+      document.documentElement.lang = 'en';
     }
   }, []);
 
