@@ -22,22 +22,61 @@ interface RegionalHolidayListProps {
 const Hero: React.FC = () => {
   const specialDays: SpecialDay[] = [
     {
+      emoji: "🍭",
+      name: "Ramazan Bayramı",
+      date: "2024-04-09",
+      giftIdeas: ["Çay veya kahve çeşitleri.", "Çikolata"],
+    },
+    {
+      emoji: "🧒🏻",
+      name: "Ulusal Egemenlik Çocuk Bayramı",
+      date: "2024-04-23",
+      giftIdeas: ["Çay veya kahve çeşitleri.", "Çikolata"],
+    },
+    {
+      emoji: "✊🏻",
+      name: "Emek ve Dayanışma Günü",
+      date: "2024-05-1",
+      giftIdeas: [],
+    },
+    {
+      emoji: "❤️",
+      name: "Atatürk'ü Anma, Gençlik ve Spor Bayramı",
+      date: "2024-05-19",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🐑",
+      name: "Kurban Bayramı",
+      date: "2024-07-28",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🎉",
+      name: "Zafer Bayramı",
+      date: "2024-08-30",
+      giftIdeas: [],
+    },
+    {
+      emoji: "🎉",
+      name: "Cumhuriyet Bayramı",
+      date: "2024-10-29",
+      giftIdeas: [],
+    },
+    {
       emoji: "💖",
       name: "Sevgililer Günü",
       date: "2024-02-14",
-      giftIdeas: [
-        "Çiçek",
-        "Saat",
-        "Kolye",
-        "Yüzük",
-        "Parfüm",
-        "Pırlanta"
-      ],
+      giftIdeas: ["Çiçek", "Saat", "Kolye", "Yüzük", "Parfüm", "Pırlanta"],
     },
   ];
 
-    const excludedGiftDays = [
-    "",
+  const excludedGiftDays = [
+    "Emek ve Dayanışma Günü",
+    "Atatürk'ü Anma, Gençlik ve Spor Bayramı",
+    "Kurban Bayramı",
+    "Zafer Bayramı",
+    "Cumhuriyet Bayramı",
   ];
 
   useEffect(() => {
@@ -54,8 +93,8 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const userLanguage = navigator.language;
 
-    if (!userLanguage.startsWith('tr')) {
-      document.documentElement.lang = 'en';
+    if (!userLanguage.startsWith("tr")) {
+      document.documentElement.lang = "en";
     }
   }, []);
 
