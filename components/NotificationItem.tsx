@@ -78,7 +78,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
           ? "bg-gray-300 bg-opacity-40 dark:bg-opacity-10 text-gray-600"
           : isFutureDay
           ? "bg-green-200 bg-opacity-40 text-gray-700"
-          : "border-gray-100 border-opacity-5"
+          : "border-gray-500 border-opacity-5"
       }`}
       onClick={handleClick}
     >

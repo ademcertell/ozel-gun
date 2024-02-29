@@ -13,6 +13,4 @@ yarn dev
 - [x] Özel günlerin takibi.
 - [x] Hatırlatma bildirimleri alma.
 - [x] Özel günler için hediye fikirleri.
-
-# Todo List
- - [x] Prompt Uyarısı eklenecek. (https://ozel-gun.vercel.app/)
+- [x] Prompt Uyarısı eklenecek. (https://ozel-gun.vercel.app/)
