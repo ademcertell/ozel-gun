@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
     {
       emoji: "🍭",
       name: "Ramazan Bayramı",
-      date: "2024-04-09",
-      giftIdeas: ["Çay veya kahve çeşitleri.", "Çikolata"],
+      date: "2024-03-11",
+      giftIdeas: [],
     },
     {
       emoji: "🧒🏻",
@@ -77,6 +77,7 @@ const Hero: React.FC = () => {
     "Kurban Bayramı",
     "Zafer Bayramı",
     "Cumhuriyet Bayramı",
+    "Ramazan Bayramı",
   ];
 
   useEffect(() => {
